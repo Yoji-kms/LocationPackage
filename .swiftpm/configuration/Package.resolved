@@ -1,0 +1,24 @@
+{
+  "originHash" : "9ef8b1800c9713e83d5a80aba68eb1ef4e51109465a0efc4558e05e774fc1317",
+  "pins" : [
+    {
+      "identity" : "locationservice",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Yoji-kms/LocationService",
+      "state" : {
+        "branch" : "main",
+        "revision" : "0dd6452bb45a485c1cd04a9a855a2ca1dc8f6fa5"
+      }
+    },
+    {
+      "identity" : "weathernetworkservice",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Yoji-kms/WeatherNetworkService",
+      "state" : {
+        "branch" : "main",
+        "revision" : "68b52860e67d52b8bc864b9271e941450b4fc13e"
+      }
+    }
+  ],
+  "version" : 3
+}
