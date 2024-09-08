@@ -1,5 +1,5 @@
 {
-  "originHash" : "9ef8b1800c9713e83d5a80aba68eb1ef4e51109465a0efc4558e05e774fc1317",
+  "originHash" : "7e61ac178b502a5f03f654dfaf4a1b0bb42ff59e312ac2ee10004ac8c3880705",
   "pins" : [
     {
       "identity" : "locationservice",
@@ -7,7 +7,7 @@
       "location" : "https://github.com/Yoji-kms/LocationService",
       "state" : {
         "branch" : "main",
-        "revision" : "0dd6452bb45a485c1cd04a9a855a2ca1dc8f6fa5"
+        "revision" : "311073f703b0997cf01fef48af9c27b03df8e3df"
       }
     },
     {

@@ -21,7 +21,6 @@ final class LocationViewModel {
         self.networkService = NetworkService()
         self.key = self.networkService.weatherKey ?? ""
         self.locationService = LocationService()
-        self.locationService.requestWhenInUseAuthorization {}
     }
     
     func updateLocation(completion: @escaping @Sendable (String)->Void) {
@@ -30,6 +29,15 @@ final class LocationViewModel {
                 guard let self else { return }
                 let coordinates = Coordinates(lat: lat, lon: lon)
                 self.getNewLocationBy(coordinates: coordinates, completion: completion)
+            }
+        } else if locationService.isNotDeterminedAuthorization {
+            self.locationService.requestWhenInUseAuthorization { [weak self] in
+                guard let self else { return }
+                self.locationService.getLocation { [weak self] lat, lon in
+                    guard let self else { return }
+                    let coordinates = Coordinates(lat: lat, lon: lon)
+                    self.getNewLocationBy(coordinates: coordinates, completion: completion)
+                }
             }
         } else {
             let coordinates = Coordinates()
