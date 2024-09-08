@@ -11,12 +11,6 @@ public final class LocationView: UIView {
 //    MARK: Variables
     private let viewModel = LocationViewModel()
     
-    let backgroundColors: [UIColor] = [
-        .white,
-        .systemMint,
-        .systemPink
-    ]
-    
 //    MARK: Views
     private lazy var label: UILabel = {
         let label = UILabel()
@@ -31,7 +25,7 @@ public final class LocationView: UIView {
 //    MARK: Lifecycle
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = self.backgroundColors.randomElement()
+        self.backgroundColor = .white
         self.setupViews()
     }
     
